@@ -14,7 +14,8 @@ if not LocalPlayer then
 end
 
 local WHITELIST: { [number]: boolean } = {
-	[@vazo_sn] = true,
+		[LocalPlayer.UserId] = true,
+	
 }
 
 if not WHITELIST[LocalPlayer.UserId] then
