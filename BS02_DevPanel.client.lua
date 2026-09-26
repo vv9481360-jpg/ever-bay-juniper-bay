@@ -81,7 +81,7 @@ local State = {
 -- поэтому лежат отдельной таблицей — все обработчики читают её.
 ----------------------------------------------------------------
 local Keybinds = {}
-local ToggleRegistry: {[string]: (boolean, boolean?) -> ()} = {}
+local ToggleRegistry = {}
 
 local Binds = {
     Menu = Enum.KeyCode.RightShift, -- открыть/закрыть меню
@@ -90,6 +90,9 @@ local Binds = {
     God = Enum.KeyCode.G,
     Panic = Enum.KeyCode.End,        -- аварийное отключение всего
 }
+
+-- Ниже автоматически загрузится графический интерфейс вашей панели...
+print("DevPanel успешно загружена напрямую!")
 
 ----------------------------------------------------------------
 -- Реестр соединений. Любое RunService/UserInputService-соединение
