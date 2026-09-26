@@ -80,8 +80,10 @@ local State = {
 -- Клавиши быстрого доступа. Меняются во вкладке «Настройки»,
 -- поэтому лежат отдельной таблицей — все обработчики читают её.
 ----------------------------------------------------------------
-local Keybinds = {
-local ToggleRegistry: {[string]: (boolean, boolean?) -> ()} = {}
+local Keybinds = {}
+local ToggleRegistry: {[image_30LT-U.png]: (boolean, boolean?) -> ()} = {}
+    Menu = Enum.KeyCode.RightShift, -- открыть/закрыть меню
+
 	Menu  = Enum.KeyCode.RightShift, -- открыть/закрыть меню
 	Fly   = Enum.KeyCode.F,
 	Noclip = Enum.KeyCode.N,
