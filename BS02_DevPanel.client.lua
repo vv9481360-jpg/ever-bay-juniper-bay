@@ -81,14 +81,14 @@ local State = {
 -- поэтому лежат отдельной таблицей — все обработчики читают её.
 ----------------------------------------------------------------
 local Keybinds = {}
-local ToggleRegistry: {[image_30LT-U.png]: (boolean, boolean?) -> ()} = {}
-    Menu = Enum.KeyCode.RightShift, -- открыть/закрыть меню
+local ToggleRegistry: {[string]: (boolean, boolean?) -> ()} = {}
 
-	Menu  = Enum.KeyCode.RightShift, -- открыть/закрыть меню
-	Fly   = Enum.KeyCode.F,
-	Noclip = Enum.KeyCode.N,
-	God   = Enum.KeyCode.G,
-	Panic = Enum.KeyCode.End,        -- аварийное отключение всего
+local Binds = {
+    Menu = Enum.KeyCode.RightShift, -- открыть/закрыть меню
+    Fly  = Enum.KeyCode.F,
+    Noclip = Enum.KeyCode.N,
+    God = Enum.KeyCode.G,
+    Panic = Enum.KeyCode.End,        -- аварийное отключение всего
 }
 
 ----------------------------------------------------------------
